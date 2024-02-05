@@ -1,2 +1,2 @@
 # openapi
-Repository for openAPI specification learning reference
+Repository for openAPI specification learning.
