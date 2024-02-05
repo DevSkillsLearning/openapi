@@ -1,0 +1,23 @@
+openapi: 3.0.3
+info:
+  title: EasyShop Products API definition
+  description: |
+    Using this OpnAPI specification, any consumer can understand the API that are exposed by EasyShop
+  termsOfService: https://easyshop.com/terms/
+  contact:
+    name: API Support
+    url: https://www.easyshop.com/support
+    email: support@easyshop.com
+  license:
+    name: EasyShop License
+    url: https://www.easyshop.com/licenses/LICENSES-2.0
+  version: 1.0.0
+servers:
+  - url: https://development.easyshop-server.com/v1
+    description: Development Server
+  - url: https://staging.easyshop-server.com/v1
+    description: Staging Server
+  - url: https://api.easyshop-server.com/v1
+    description: Production Server
+paths:
+  
