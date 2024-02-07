@@ -31,9 +31,18 @@ servers:
     description: Staging Server
   - url: https://api.easyshop-server.com/v1
     description: Production Server
+tags:
+  - name: Categories
+    description: Categories-related operations
+  - name: Products
+    description: Products-related operations
+  - name: Orders
+    description: Orders-related operations
 paths:
   /categories:
     get:
+      tags:
+        - Categories
       summary: List all categories
       description: Returns the list of categories supported by EasyShop
       parameters:
@@ -85,6 +94,8 @@ paths:
                       name: mobiles
   /categories/{categoryId}:
     get:
+      tags:
+        - Categories
       summary: Return the category details
       description: Returns the category from the EasyShop
       parameters:
@@ -110,6 +121,8 @@ paths:
                     type: string
   /products:
     get:
+      tags:
+        - Products
       summary: List all products
       description: Returns the list of products supported by EasyShop
       parameters:
@@ -170,6 +183,8 @@ paths:
                       quantity: 67
   /products/{productId}:
     get:
+      tags:
+        - Products
       summary: Returns the product details
       description: Returns the product details from the EasyShop
       parameters:
@@ -212,6 +227,8 @@ paths:
                       example: 63
   /orders:
     post:
+      tags:
+        - Orders
       summary: Create Order
       description: |
         Post order details to EasyShop for processing and shipping
@@ -258,6 +275,8 @@ paths:
                   orderId:
                     type: integer
     put:
+      tags:
+        - Orders
       summary: Update Order
       description: |
         Update order details to EasyShop for processing and shipping
@@ -303,6 +322,8 @@ paths:
         '200':
           description: Order details updated successfully
     delete:
+      tags:
+        - Orders
       summary: Delete Order
       description: Delete Order details from EasyShop
       parameters:
@@ -315,6 +336,8 @@ paths:
         '204':
           description: Order details deleted successfully
     get:
+      tags:
+        - Orders
       summary: Get Order details
       description: |
         Get order details from the EasyShop
