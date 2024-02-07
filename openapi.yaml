@@ -184,7 +184,7 @@ paths:
       operationId: getProductDetails
       parameters:
         - name: productId
-          in: in
+          in: path
           required: true
           schema:
             type: integer
